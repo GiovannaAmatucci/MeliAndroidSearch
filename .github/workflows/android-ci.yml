@@ -9,7 +9,7 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-    environment: production # Adicione o nome do seu ambiente aqui
+    environment: SECRET_KEY
     steps:
     - uses: actions/checkout@v3
     - name: set up JDK 17
