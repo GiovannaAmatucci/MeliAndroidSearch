@@ -1,9 +1,12 @@
 package com.giovanna.amatucci.melisearch.data.network
 
-import android.content.Context
+import com.giovanna.amatucci.melisearch.data.db.TokenDao
 import io.ktor.client.HttpClient
 import io.ktor.client.engine.okhttp.OkHttp
 import io.ktor.client.plugins.HttpTimeout
+import io.ktor.client.plugins.auth.Auth
+import io.ktor.client.plugins.auth.providers.BearerTokens
+import io.ktor.client.plugins.auth.providers.bearer
 import io.ktor.client.plugins.contentnegotiation.ContentNegotiation
 import io.ktor.client.plugins.defaultRequest
 import io.ktor.client.plugins.logging.LogLevel
@@ -14,30 +17,17 @@ import io.ktor.http.URLProtocol
 import io.ktor.http.contentType
 import io.ktor.serialization.kotlinx.json.json
 import kotlinx.serialization.json.Json
-import okhttp3.Cache
 import timber.log.Timber
-import java.io.File
 
 class NetworkHttpClientImpl(
     private val baseHostUrl: String,
     private val requestTimeout: Long,
     private val connectTimeout: Long,
     private val isDebug: Boolean,
-    private val applicationContext: Context
+    private val tokenDao: TokenDao
 ) : NetworkHttpClient {
 
     override operator fun invoke(): HttpClient = HttpClient(OkHttp) {
-        engine {
-            config {
-                cache(
-                    Cache(
-                        directory = File(applicationContext.cacheDir, "http_cache"),
-                        maxSize = 50L * 1024L * 1024L
-                    )
-                )
-            }
-        }
-
         install(ContentNegotiation) {
             json(
                 Json {
@@ -46,6 +36,20 @@ class NetworkHttpClientImpl(
                     isLenient = true
                 }
             )
+        }
+
+        install(Auth) {
+            bearer {
+                loadTokens {
+                    val token = tokenDao.getToken()?.accessToken
+                    val refreshToken = tokenDao.getToken()?.refreshToken
+                    if (token != null) {
+                        BearerTokens(accessToken = token, refreshToken = refreshToken)
+                    } else {
+                        null
+                    }
+                }
+            }
         }
 
         defaultRequest {
@@ -63,7 +67,7 @@ class NetworkHttpClientImpl(
         }
 
         install(Logging) {
-            level = if (isDebug) LogLevel.BODY else LogLevel.NONE
+            level = if (isDebug) LogLevel.ALL else LogLevel.NONE
             logger = object : Logger {
                 override fun log(message: String) {
                     if (isDebug) {
