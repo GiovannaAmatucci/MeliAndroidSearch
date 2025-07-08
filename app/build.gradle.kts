@@ -1,3 +1,5 @@
+import java.util.Properties
+
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
@@ -5,6 +7,11 @@ plugins {
     alias(libs.plugins.kotlin.ksp)
     alias(libs.plugins.kotlin.serialization)
 }
+
+val apikeyProperties = Properties().apply {
+    load(File(rootDir, "apikey.properties").inputStream())
+}
+
 
 android {
     namespace = "com.giovanna.amatucci.melisearch"
@@ -22,9 +29,22 @@ android {
             useSupportLibrary = true
         }
         buildConfigField(
-            "String", "BASE_HOST_URL",
-            "\"api.mercadolibre.com\""
+            "String",
+            "PUBLIC_KEY",
+            "\"${apikeyProperties.getProperty("PUBLIC_KEY")}\""
         )
+        buildConfigField(
+            "String",
+            "PRIVATE_KEY",
+            "\"${apikeyProperties.getProperty("PRIVATE_KEY")}\""
+        )
+        buildConfigField("String", "BASE_URL", "\"api.mercadolibre.com\"")
+        buildConfigField(
+            "String",
+            "DB_PASSPHRASE",
+            "\"${apikeyProperties.getProperty("DB_PASSPHRASE")}\""
+        )
+
     }
 
     buildTypes {
@@ -91,24 +111,30 @@ android {
 dependencies {
     // --- KotlinX ---
     implementation(libs.kotlinx.serialization)
+    implementation(libs.kotlinx.datetime)
 
     // --- Jetpack Compose & UI --- 🚀
     implementation(platform(libs.androidx.compose.bom))
     implementation(libs.androidx.compose.ui)
     implementation(libs.androidx.compose.foundation)
     implementation(libs.androidx.compose.material3)
+    implementation(libs.androidx.compose.material.icons.extended)
     implementation(libs.androidx.activity.compose)
     implementation(libs.androidx.lifecycle.viewmodel.compose)
     implementation(libs.androidx.navigation.compose)
 
     // --- Visualization and debugging tools ---
     implementation(libs.androidx.compose.ui.tooling.preview)
+    implementation(libs.androidx.material3)
+    implementation(libs.androidx.ui.text)
     debugImplementation(libs.androidx.compose.ui.tooling)
 
     // --- Architecture and Lifecycle ---
+    implementation(libs.androidx.appcompat)
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.lifecycle.runtimeKtx)
     implementation(libs.androidx.lifecycle.viewmodel.ktx)
+    implementation(libs.androidx.core.splashscreen)
 
     // --- Dependency Injection (Koin) ---
     implementation(platform(libs.koin.bom))
@@ -120,15 +146,26 @@ dependencies {
 
     // --- Networking (Ktor) ---
     implementation(libs.ktor.core)
+    implementation(libs.ktor.auth)
     implementation(libs.ktor.okhttp)
     implementation(libs.ktor.content.negotiation)
     implementation(libs.ktor.client.mock)
     implementation(libs.ktor.json)
     implementation(libs.ktor.logging)
 
+    // --- Room ---
+    implementation(libs.room.runtime)
+    implementation(libs.room.ktx)
+    ksp(libs.room.compiler)
+    //implementation(libs.room.testing)
+
     // --- Image Loading (Glide) ---
     implementation(libs.glide.compose)
     implementation(libs.glide.ksp)
+
+    // --- Paging ---
+    implementation(libs.androidx.paging.runtime)
+    implementation(libs.androidx.paging.compose)
 
     // --- Logging (Timber) ---
     implementation(libs.timber)
@@ -137,6 +174,9 @@ dependencies {
     implementation(libs.kotlin.coroutines.core)
     implementation(libs.kotlin.coroutines.android)
 
+    // --- SQLCipher ---
+    implementation(libs.sqlcipher)
+
     // --- Unit Testing (Local) --- 🧪
     testImplementation(libs.test.junit)
     testImplementation(libs.test.mockk)
@@ -144,6 +184,7 @@ dependencies {
     testImplementation(libs.kotlin.coroutines.test)
     testImplementation(libs.androidx.core.testing)
     testImplementation(libs.koin.test)
+    testImplementation(libs.paging.test)
 
     // --- Instrumentation Tests (Android) --- 🧪
     androidTestImplementation(platform(libs.androidx.compose.bom))
