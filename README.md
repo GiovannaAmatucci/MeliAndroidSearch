@@ -6,9 +6,21 @@ Este projeto é uma aplicação Android desenvolvida como parte de um desafio t�
 
 ## 📸 Telas da Aplicação
 
-|                   Pesquisa                    |                       Resultados da Pesquisa                       | Detalhes do Produto |
-|:---------------------------------------------:|:------------------------------------------------------------------:| :---: |
-| ![Tela de Pesquisa](assets/search-screen.png) | ![Tela de Resultados da Pesquisa](assets/search-result-screen.png) | ![Tela de Detalhes do Produto](assets/product-details-screen.png) 
+|                      E-mail/Login                      |                      Password/Login                      |                           Token/Login                            |
+|:------------------------------------------------------:|:--------------------------------------------------------:|:----------------------------------------------------------------:|
+| ![Tela de Login E-mail](assets/login-email-screen.png) | ![Tela de Login Senha](assets/login-password-screen.png) | ![Tela de Login Token](assets/login-token-screen.png) 
+
+|                         Code/Login                         |                          Home                           |                           Pesquisa                            |
+|:----------------------------------------------------------:|:-------------------------------------------------------:|:----------------------------------------------------------------:|
+| ![Tela Login Token WhatsApp](assets/login-code-screen.pnj) | ![Tela Home de Pesquisa](assets/home-search-screen.png) | ![Tela de Pesquisa](assets/search-screen.png) 
+
+|                   Resultados da Pesquisa                    |                       Detalhes do Produto                      |                       Descrição do Produto                       |
+|:---------------------------------------------:|:------------------------------------------------------------------:|:----------------------------------------------------------------:|
+| ![Tela de Resultados da Pesquisa](assets/search-result-screen.png) | ![Tela de Detalhes do Produto](assets/product-detail-screen.png) | ![Tela de Descrição do Produto](assets/product-description-screen.png) |
+
+|                      Histórico de Pesquisa                       |
+|:----------------------------------------------------------------:|
+| ![Tela de Histórico da Pesquisa](assets/list-search-screen.png) |
 
 ## ✨ Funcionalidades
 
