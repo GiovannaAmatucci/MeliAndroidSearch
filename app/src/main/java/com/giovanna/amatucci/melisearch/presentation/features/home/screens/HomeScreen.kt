@@ -1,5 +1,3 @@
-@file:Suppress("UNCHECKED_CAST")
-
 package com.giovanna.amatucci.melisearch.presentation.features.home.screens
 
 import androidx.compose.foundation.layout.Box

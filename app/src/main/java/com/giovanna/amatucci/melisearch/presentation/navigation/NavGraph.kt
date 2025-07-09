@@ -1,6 +1,5 @@
 package com.giovanna.amatucci.melisearch.presentation.navigation
 
-import com.giovanna.amatucci.melisearch.domain.model.ProductDetail
 import kotlinx.serialization.Serializable
 
 @Serializable
