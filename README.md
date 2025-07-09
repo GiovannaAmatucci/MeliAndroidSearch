@@ -8,11 +8,7 @@ Este projeto é uma aplicação Android desenvolvida como parte de um desafio t�
 
 | Pesquisa | Resultados da Pesquisa | Detalhes do Produto |
 | :---: | :---: | :---: |
-| ![Tela de Pesquisa](https://i.imgur.com/8Q5d2q1.png) | ![Tela de Resultados da Pesquisa](https://i.imgur.com/2YyB7gN.png) | ![Tela de Detalhes do Produto](https://i.imgur.com/vH9b2Yk.png) |
-
-| Detalhes (Continuação) | Sem Resultados | Erro |
-| :---: | :---: | :---: |
-| ![Tela de Detalhes do Produto](https://i.imgur.com/nJgqB4U.jpg) | ![Tela de Nenhum Resultado Encontrado](https://i.imgur.com/fD0nZ4K.png) | ![Tela de Erro](https://i.imgur.com/g0P0F1O.jpg) |
+| ![Tela de Pesquisa](https://drive.google.com/file/d/1ApREf6g9aMwgWUsEv6dOBapnM9xiS3Ts/view?usp=sharing) | ![Tela de Resultados da Pesquisa](https://drive.google.com/file/d/1wJhROSAGaQ4ObVyIhlLnABKR9umYkvIo/view?usp=sharing) | ![Tela de Detalhes do Produto](https://drive.google.com/file/d/1IVS9R3vav0li2LZ1fr6QJoblxLXHn6LH/view?usp=sharing) 
 
 ## ✨ Funcionalidades
 
