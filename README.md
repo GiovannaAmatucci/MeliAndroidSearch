@@ -8,7 +8,7 @@ Este projeto é uma aplicação Android desenvolvida como parte de um desafio t�
 
 |                   Pesquisa                    |                       Resultados da Pesquisa                       | Detalhes do Produto |
 |:---------------------------------------------:|:------------------------------------------------------------------:| :---: |
-| ![Tela de Pesquisa](assets/search-screen.png) | ![Tela de Resultados da Pesquisa](assets/search-result-screen.png) | ![Tela de Detalhes do Produto](assets/product-detail-screen.png) 
+| ![Tela de Pesquisa](assets/search-screen.png) | ![Tela de Resultados da Pesquisa](assets/search-result-screen.png) | ![Tela de Detalhes do Produto](assets/product-details-screen.png) 
 
 ## ✨ Funcionalidades
 
