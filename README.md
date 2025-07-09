@@ -35,13 +35,12 @@ Este projeto é uma aplicação Android desenvolvida como parte de um desafio t�
     * **StateFlow:** Para observar mudanças nos dados e atualizar a UI de forma reativa.
     * **Navigation Component:** Para gerenciar a navegação entre as telas do app.
 * **Networking:**
-    * **Retrofit:** Para realizar chamadas de API de forma declarativa.
-    * **OkHttp:** Como cliente HTTP.
+    * **Ktor Client:** Para realizar chamadas de API Http.
 * **Injeção de Dependência:**
-    * **Hilt:** Para simplificar a injeção de dependência no projeto.
-* **Coroutines:** Para gerenciamento de operações assíncronas.
+    * **Koin:** Para injeção de dependências.
+* **Coroutines e Flow:** Para gerenciamento de operações assíncronas.
 * **Carregamento de Imagens:**
-    * **Coil:** Para carregar imagens da internet de forma eficiente.
+    * **Glide:** Para carregar imagens da internet de forma eficiente.
 
 ## ⚙️ Configuração do Ambiente de Desenvolvimento
 
@@ -62,7 +61,7 @@ Para compilar e executar o projeto localmente, siga os passos abaixo.
 
 2.  **Crie suas credenciais da API do Mercado Livre:**
     * Acesse o portal de desenvolvedores do Mercado Livre: [https://developers.mercadolivre.com.br/devcenter/](https://developers.mercadolivre.com.br/devcenter/)
-    * Crie uma nova aplicação para obter seu `client_id` e `client_secret`. Estas credenciais são necessárias para gerar o `ACCESS_TOKEN` para autenticar as requisições à API.
+    * Crie uma nova aplicação para obter seu `client_id` e `client_secret`. Estas credenciais são necessárias para gerar o Bearer `ACCESS_TOKEN` para autenticar as requisições à API.
 
 3.  **Configure suas chaves de API:**
     * Na raiz do projeto, crie um arquivo chamado `apikey.properties`.
