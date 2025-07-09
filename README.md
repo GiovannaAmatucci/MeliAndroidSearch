@@ -1,0 +1,89 @@
+# Meli Android Search
+
+![CI do Android com Gradle](https://github.com/GiovannaAmatucci/MeliAndroidSearch/actions/workflows/android-ci.yml/badge.svg)
+
+Este projeto é uma aplicação Android desenvolvida como parte de um desafio técnico, que consome a API do Mercado Livre para permitir que os usuários pesquisem produtos, visualizem os resultados e vejam os detalhes de um item específico.
+
+## 📸 Telas da Aplicação
+
+| Pesquisa | Resultados da Pesquisa | Detalhes do Produto |
+| :---: | :---: | :---: |
+| ![Tela de Pesquisa](https://i.imgur.com/8Q5d2q1.png) | ![Tela de Resultados da Pesquisa](https://i.imgur.com/2YyB7gN.png) | ![Tela de Detalhes do Produto](https://i.imgur.com/vH9b2Yk.png) |
+
+| Detalhes (Continuação) | Sem Resultados | Erro |
+| :---: | :---: | :---: |
+| ![Tela de Detalhes do Produto](https://i.imgur.com/nJgqB4U.jpg) | ![Tela de Nenhum Resultado Encontrado](https://i.imgur.com/fD0nZ4K.png) | ![Tela de Erro](https://i.imgur.com/g0P0F1O.jpg) |
+
+## ✨ Funcionalidades
+
+* **Busca de Produtos:** Campo de pesquisa para encontrar itens na plataforma do Mercado Livre.
+* **Listagem de Resultados:** Exibição dos resultados da busca em uma lista clara e objetiva.
+* **Detalhes do Produto:** Visualização de informações detalhadas de um produto selecionado, incluindo imagens, preço e descrição.
+* **Tratamento de Estado:** A aplicação mantém o estado em todas as telas, mesmo após a rotação do dispositivo.
+* **Experiência do Usuário:** Interface fluida com feedback visual para carregamento, erros e estados vazios.
+
+## 🛠️ Tecnologias Utilizadas
+
+* **Linguagem:** [Kotlin](https://kotlinlang.org/)
+* **Arquitetura:** MVVM (Model-View-ViewModel)
+* **Componentes de Arquitetura do Android (Jetpack):**
+    * **ViewModel:** Para gerenciar dados relacionados à UI de forma consciente do ciclo de vida.
+    * **StateFlow:** Para observar mudanças nos dados e atualizar a UI de forma reativa.
+    * **Navigation Component:** Para gerenciar a navegação entre as telas do app.
+* **Networking:**
+    * **Retrofit:** Para realizar chamadas de API de forma declarativa.
+    * **OkHttp:** Como cliente HTTP.
+* **Injeção de Dependência:**
+    * **Hilt:** Para simplificar a injeção de dependência no projeto.
+* **Coroutines:** Para gerenciamento de operações assíncronas.
+* **Carregamento de Imagens:**
+    * **Coil:** Para carregar imagens da internet de forma eficiente.
+
+## ⚙️ Configuração do Ambiente de Desenvolvimento
+
+Para compilar e executar o projeto localmente, siga os passos abaixo.
+
+### Pré-requisitos
+
+* Android Studio Hedgehog ou superior.
+* JDK 17.
+
+### Passos
+
+1.  **Clone o repositório:**
+    ```bash
+    git clone [https://github.com/GiovannaAmatucci/MeliAndroidSearch.git](https://github.com/GiovannaAmatucci/MeliAndroidSearch.git)
+    cd MeliAndroidSearch
+    ```
+
+2.  **Crie suas credenciais da API do Mercado Livre:**
+    * Acesse o portal de desenvolvedores do Mercado Livre: [https://developers.mercadolivre.com.br/devcenter/](https://developers.mercadolivre.com.br/devcenter/)
+    * Crie uma nova aplicação para obter seu `client_id` e `client_secret`. Estas credenciais são necessárias para gerar o `ACCESS_TOKEN` para autenticar as requisições à API.
+
+3.  **Configure suas chaves de API:**
+    * Na raiz do projeto, crie um arquivo chamado `apikey.properties`.
+    * Adicione suas credenciais ao arquivo no seguinte formato:
+        ```properties
+        CLIENT_ID="SEU_CLIENT_ID"
+        CLIENT_SECRET="SEU_CLIENT_SECRET"
+        ```
+    * Substitua `"SEU_CLIENT_ID"` e `"SEU_CLIENT_SECRET"` pelas chaves que você gerou no portal do Mercado Livre.
+
+4.  **Compile e execute o projeto:**
+    * Abra o projeto no Android Studio.
+    * O Gradle irá sincronizar e baixar as dependências necessárias.
+    * Execute o aplicativo em um emulador ou dispositivo físico.
+
+## 🚀 Deploy (CI/CD)
+
+O processo de Integração Contínua (CI) está configurado através do GitHub Actions, utilizando o workflow definido em `.github/workflows/android-ci.yml`.
+
+Este workflow é acionado automaticamente a cada `push` ou `pull request` direcionado à branch `master`. As principais etapas do processo são:
+
+1.  **Checkout:** O código da branch é baixado para o ambiente de execução.
+2.  **Setup JDK:** O ambiente é configurado com a versão 17 do Java.
+3.  **Setup Gradle:** O cache do Gradle é configurado para acelerar os builds futuros.
+4.  **Make gradlew executable:** A permissão de execução é concedida ao wrapper do Gradle.
+5.  **Build with Gradle:** O projeto é compilado e os testes unitários são executados com o comando `./gradlew build`.
+
+Este processo garante que novas alterações não quebrem a funcionalidade existente e que o projeto esteja sempre em um estado compilável, mantendo a qualidade e a integridade do código.
