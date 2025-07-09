@@ -12,7 +12,7 @@ Este projeto é uma aplicação Android desenvolvida como parte de um desafio t�
 
 |                         Code/Login                         |                          Home                           |                           Pesquisa                            |
 |:----------------------------------------------------------:|:-------------------------------------------------------:|:----------------------------------------------------------------:|
-| ![Tela Login Token WhatsApp](assets/login-code-screen.pnj) | ![Tela Home de Pesquisa](assets/home-search-screen.png) | ![Tela de Pesquisa](assets/search-screen.png) 
+| ![Tela Login Token WhatsApp](assets/login-code-screen.png) | ![Tela Home de Pesquisa](assets/home-search-screen.png) | ![Tela de Pesquisa](assets/search-screen.png) 
 
 |                   Resultados da Pesquisa                    |                       Detalhes do Produto                      |                       Descrição do Produto                       |
 |:---------------------------------------------:|:------------------------------------------------------------------:|:----------------------------------------------------------------:|
