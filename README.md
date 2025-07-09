@@ -20,6 +20,7 @@ Este projeto é uma aplicação Android desenvolvida como parte de um desafio t�
 
 ## ✨ Funcionalidades
 
+* **Autenticaçâo:** Autenticaçâo do Mercado Livre para processo de Oauth2 Bearer Token.
 * **Busca de Produtos:** Campo de pesquisa para encontrar itens na plataforma do Mercado Livre.
 * **Listagem de Resultados:** Exibição dos resultados da busca em uma lista clara e objetiva.
 * **Detalhes do Produto:** Visualização de informações detalhadas de um produto selecionado, incluindo imagens, preço e descrição.
@@ -28,14 +29,16 @@ Este projeto é uma aplicação Android desenvolvida como parte de um desafio t�
 
 ## 🛠️ Tecnologias Utilizadas
 
-* **Linguagem:** [Kotlin](https://kotlinlang.org/)
-* **Arquitetura:** MVVM (Model-View-ViewModel)
+* **Linguagem:** [Kotlin 2](https://kotlinlang.org/)
+* **Arquitetura:** MVVM (Model-View-ViewModel) com Clean Architecure pensando em escalabilidade de forma segura e eficiente.
 * **Componentes de Arquitetura do Android (Jetpack):**
+    * **Jetpack Compose:** Para implementaçâo de UI de formma moderna e eficiente.
     * **ViewModel:** Para gerenciar dados relacionados à UI de forma consciente do ciclo de vida.
     * **StateFlow:** Para observar mudanças nos dados e atualizar a UI de forma reativa.
     * **Navigation Component:** Para gerenciar a navegação entre as telas do app.
 * **Networking:**
     * **Ktor Client:** Para realizar chamadas de API Http.
+* **Room:** Para persistência de dados em cache Local juntamente com SQLCipher para armazenamento seguro criptografado.
 * **Injeção de Dependência:**
     * **Koin:** Para injeção de dependências.
 * **Coroutines e Flow:** Para gerenciamento de operações assíncronas.
