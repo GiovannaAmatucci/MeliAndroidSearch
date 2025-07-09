@@ -1,5 +1,6 @@
 package com.giovanna.amatucci.melisearch.di
 
+import com.giovanna.amatucci.melisearch.BuildConfig
 import com.giovanna.amatucci.melisearch.data.network.NetworkHttpClient
 import com.giovanna.amatucci.melisearch.data.network.NetworkHttpClientImpl
 import com.giovanna.amatucci.melisearch.data.api.MeliApi
@@ -17,7 +18,10 @@ import com.giovanna.amatucci.melisearch.domain.usecase.GetSearchProductUseCase
 import com.giovanna.amatucci.melisearch.domain.usecase.GetSearchProductUseCaseImpl
 import com.giovanna.amatucci.melisearch.domain.usecase.GetProductsDetailUseCase
 import com.giovanna.amatucci.melisearch.domain.usecase.GetProductsDetailUseCaseImpl
+import com.giovanna.amatucci.melisearch.presentation.features.home.HomeViewModel
+import com.giovanna.amatucci.melisearch.presentation.features.login.LoginViewModel
 import org.koin.android.ext.koin.androidContext
+import org.koin.core.module.dsl.viewModel
 import org.koin.dsl.module
 
 val appModule = module {
@@ -47,4 +51,6 @@ val appModule = module {
     single<GetSearchProductUseCase> { GetSearchProductUseCaseImpl(searchRepository = get()) }
     single<GetProductsDetailUseCase> { GetProductsDetailUseCaseImpl(productRepository = get()) }
     single<GeneratePkceUseCase> { GeneratePkceParamsUseCaseImpl() }
+    viewModel { LoginViewModel(repository = get(), useCase = get()) }
+    viewModel { HomeViewModel(useCase = get(), productDetailUseCase = get(), repository = get()) }
 }
