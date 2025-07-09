@@ -32,7 +32,7 @@ Este projeto é uma aplicação Android desenvolvida como parte de um desafio t�
 * **Linguagem:** [Kotlin 2](https://kotlinlang.org/)
 * **Arquitetura:** MVVM (Model-View-ViewModel) com Clean Architecure pensando em escalabilidade de forma segura e eficiente.
 * **Componentes de Arquitetura do Android (Jetpack):**
-    * **Jetpack Compose:** Para implementaçâo de UI de formma moderna e eficiente.
+    * **Jetpack Compose:** Para implementação de UI de forma moderna e eficiente.
     * **ViewModel:** Para gerenciar dados relacionados à UI de forma consciente do ciclo de vida.
     * **StateFlow:** Para observar mudanças nos dados e atualizar a UI de forma reativa.
     * **Navigation Component:** Para gerenciar a navegação entre as telas do app.
