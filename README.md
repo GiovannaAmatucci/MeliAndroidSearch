@@ -20,7 +20,7 @@ Este projeto é uma aplicação Android desenvolvida como parte de um desafio t�
 
 ## ✨ Funcionalidades
 
-* **Autenticaçâo:** Autenticaçâo do Mercado Livre para processo de Oauth2 Bearer Token.
+* **Autenticação:** Autenticação do Mercado Livre para processo de Oauth2 Bearer Token.
 * **Busca de Produtos:** Campo de pesquisa para encontrar itens na plataforma do Mercado Livre.
 * **Listagem de Resultados:** Exibição dos resultados da busca em uma lista clara e objetiva.
 * **Detalhes do Produto:** Visualização de informações detalhadas de um produto selecionado, incluindo imagens, preço e descrição.
