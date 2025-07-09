@@ -1,3 +1,32 @@
 <resources>
-    <string name="app_name">Meli Search</string>
+    <string name="app_name" translatable="false">Meli Search</string>
+    <!-- Strings Globais -->
+    <string name="action_back" translatable="false">Voltar</string>
+    <string name="error_generic" translatable="false">Ocorreu um erro. Tente novamente.</string>
+
+    <!-- LoginScreen -->
+    <string name="login_error" translatable="false">Erro ao fazer login. Verifique sua conexão.</string>
+
+    <!-- TopSearchBar -->
+    <string name="search_bar_placeholder" translatable="false">Buscar no Mercado Livre</string>
+    <string name="search_bar_search_icon_description" translatable="false">Pesquisar</string>
+    <string name="search_bar_clear_icon_description">Limpar busca</string>
+    <string name="search_bar_history_icon_description">Item do histórico</string>
+
+    <!-- HomeScreen -->
+    <string name="home_error_loading_products" translatable="false">Erro ao carregar os produtos.</string>
+    <string name="home_product_card_image_description" translatable="false">Imagem do produto %1$s</string>
+    <string name="home_initial_state_text">"Nenhum item por aqui"</string>
+    <string name="home_initial_state_subtext">"Use a barra de pesquisa para encontrar produtos"</string>
+    <string name="home_search_no_results">Nenhum anúncio encontrado</string>
+    <string name="home_search_no_results_suggestion">Verifique se você digitou as palavras corretamente ou tente termos mais gerais.</string>
+    <string name="home_empty_search_icon_description">Ícone de busca sem resultados</string>
+
+
+    <!-- ProductDetailScreen -->
+    <string name="product_detail_image_description" translatable="false">Imagem do produto</string>
+    <string name="product_detail_section_title_attributes" translatable="false">Características</string>
+    <string name="product_detail_no_image_available">Nenhuma imagem disponível</string>
+
 </resources>
+
