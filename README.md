@@ -6,9 +6,9 @@ Este projeto é uma aplicação Android desenvolvida como parte de um desafio t�
 
 ## 📸 Telas da Aplicação
 
-| Pesquisa | Resultados da Pesquisa | Detalhes do Produto |
-| :---: | :---: | :---: |
-| ![Tela de Pesquisa](https://drive.google.com/file/d/1ApREf6g9aMwgWUsEv6dOBapnM9xiS3Ts/view?usp=sharing) | ![Tela de Resultados da Pesquisa](https://drive.google.com/file/d/1wJhROSAGaQ4ObVyIhlLnABKR9umYkvIo/view?usp=sharing) | ![Tela de Detalhes do Produto](https://drive.google.com/file/d/1IVS9R3vav0li2LZ1fr6QJoblxLXHn6LH/view?usp=sharing) 
+|                   Pesquisa                    |                       Resultados da Pesquisa                       | Detalhes do Produto |
+|:---------------------------------------------:|:------------------------------------------------------------------:| :---: |
+| ![Tela de Pesquisa](assets/search-screen.png) | ![Tela de Resultados da Pesquisa](assets/search-result-screen.png) | ![Tela de Detalhes do Produto](assets/product-detail-screen.png) 
 
 ## ✨ Funcionalidades
 
