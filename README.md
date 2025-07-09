@@ -16,7 +16,7 @@ Este projeto é uma aplicação Android desenvolvida como parte de um desafio t�
 
 |                   Resultados da Pesquisa                    |                       Detalhes do Produto                      |                       Descrição do Produto                       |
 |:---------------------------------------------:|:------------------------------------------------------------------:|:----------------------------------------------------------------:|
-| ![Tela de Resultados da Pesquisa](assets/search-result-screen.png) | ![Tela de Detalhes do Produto](assets/product-detail-screen.png) | ![Tela de Descrição do Produto](assets/product-description-screen.png) |
+| ![Tela de Resultados da Pesquisa](assets/search-result-screen.png) | ![Tela de Detalhes do Produto](assets/product-details-screen.png) | ![Tela de Descrição do Produto](assets/product-description-screen.png) |
 
 |                      Histórico de Pesquisa                       |
 |:----------------------------------------------------------------:|
