@@ -64,7 +64,7 @@ Para compilar e executar o projeto localmente, siga os passos abaixo.
 
 2.  **Crie suas credenciais da API do Mercado Livre:**
     * Acesse o portal de desenvolvedores do Mercado Livre: [https://developers.mercadolivre.com.br/devcenter/](https://developers.mercadolivre.com.br/devcenter/)
-    * Crie uma nova aplicação para obter seu `client_id` , `client_secret` e informe o redirect_uri = [https://giovannaamatucci.github.io].Estas credenciais são necessárias para gerar o Bearer `ACCESS_TOKEN` para autenticar as requisições à API.
+    * Crie uma nova aplicação para obter seu `client_id` , `client_secret` e informe o redirect_uri = [https://giovannaamatucci.github.io]. Estas credenciais são necessárias para gerar o Bearer `ACCESS_TOKEN` para autenticar as requisições à API.
 
 3.  **Configure suas chaves de API:**
     * Na raiz do projeto, crie um arquivo chamado `apikey.properties`.
